@@ -40,17 +40,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
+👤 **Alex Masangana**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
 👤 **David Vera**
 
 - GitHub: [@indigodavid](https://github.com/indigodavid)
 - Twitter: [@indigo1987](https://twitter.com/indigo1987)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/david-vera-castillo-001b5756/)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
