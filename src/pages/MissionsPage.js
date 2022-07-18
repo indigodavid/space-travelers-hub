@@ -1,8 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMissions } from '../redux/missions/missions';
 
 const MissionsPage = () => {
   const missions = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, []);
   return (
     <div className="missions">
       <header>
