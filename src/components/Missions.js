@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missions';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import JoinMission from './JoinMission';
+import MissionBadge from './MissionBadge';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
   return (
     <ul className="missionsData">
       {missions.map((mission) => (
@@ -15,8 +12,8 @@ const Missions = () => {
           <div className="missionName">{mission.mission_name}</div>
           <div className="description">{mission.description}</div>
           <div className="status">
-            <button type="button" className="membership">Not a Member</button>
-            <button type="button" className="join">Join Mission</button>
+            <MissionBadge reserved={mission.reserved} />
+            <JoinMission reserved={mission.reserved} id={mission.mission_id} />
           </div>
         </li>
       ))}
