@@ -20,7 +20,7 @@ const MyProfile = () => {
         <h2>My Rockets</h2>
         <ul id="rockets-list">
           {rockets.map((rocket) => (
-            <li key={rocket.id}>{rocket.rocket_name}</li>
+            <li key={rocket.rocketId}>{rocket.rocketName}</li>
           ))}
         </ul>
       </div>
