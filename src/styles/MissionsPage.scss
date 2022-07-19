@@ -1,0 +1,56 @@
+$color-accent: #2d56b5;
+$color-negative: #fff;
+
+@mixin missions-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 1em;
+}
+
+@mixin flex-column-gap-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.missions {
+  @include flex-column-gap-1();
+  header {
+    @include missions-grid();
+    text-align: center;
+  }
+}
+
+.missionsData {
+  @include flex-column-gap-1();
+  li {
+    @include missions-grid();
+    .missionName {
+      font-weight: 700;
+    }
+
+    .status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      background-color: $color-accent;
+      cursor: pointer;
+      color: $color-negative;
+      font-size: 0.8rem;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+
+    button:hover {
+      border: $color-accent solid 0.06em;
+      background-color: $color-negative;
+      color: $color-accent;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
+import '../styles/MissionsPage.scss';
 
 const MissionsPage = () => {
   const missions = useSelector((state) => state.missions);
