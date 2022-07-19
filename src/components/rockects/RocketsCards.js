@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-//import { reserveRocket, cancelRocket } from '../../redux/rockets/RocketsSlice';
+import { reserveRocket, cancelRocket } from '../../redux/rockets/RocketsSlice';
 
 function RocketsCards({ rocket }) {
   const dispatch = useDispatch();
 
   const {
-    rocketId, rocketName, rocketDesc, rocketImg, /*rocketReserved,*/
+    rocketId, rocketName, rocketDesc, rocketImg, rocketReserved,
   } = rocket;
 
   const reserveHandler = (e) => {
@@ -26,10 +26,10 @@ function RocketsCards({ rocket }) {
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
         <p className="paraDesc">
-          {/*rocketReserved === true && (<span className="rocketReserved">Reserved</span>)*/}
+          {rocketReserved === true && (<span className="rocketReserved">Reserved</span>)}
           {rocketDesc}
         </p>
-        {/* rocketReserved === true
+        { rocketReserved === true
     ? (
       <button className="cancelBtn" type="button" id={rocketId} onClick={cancelHandler}>
         Cancel Reservation
@@ -39,7 +39,7 @@ function RocketsCards({ rocket }) {
       <button className="reserveBtn" type="button" id={rocketId} onClick={reserveHandler}>
         Reserve Rocket
       </button>
-    )*/}
+    )}
       </div>
     </section>
   );
@@ -51,7 +51,7 @@ RocketsCards.propTypes = {
     rocketName: PropTypes.string,
     rocketDesc: PropTypes.string,
     rocketImg: PropTypes.string,
-    //rocketReserved: PropTypes.bool,
+    rocketReserved: PropTypes.bool,
   }).isRequired,
 };
 
