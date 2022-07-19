@@ -14,7 +14,7 @@ function App() {
         <Route path="missions" element={<Missions />} />
         <Route path="myprofile" element={<Myprofile />} />
       </Routes>
-      </div>
+    </div>
   );
 }
 
