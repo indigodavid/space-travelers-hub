@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../images/planet.png';
 import '../styles/Header.css';
 
@@ -11,10 +11,10 @@ const Header = () => (
     </div>
     <div className="nav">
       <ul>
-        <Link to="/"><li>Rocket</li></Link>
-        <Link to="missions"><li>Mission</li></Link>
+        <NavLink to="/"><li>Rocket</li></NavLink>
+        <NavLink to="missions"><li>Mission</li></NavLink>
         |
-        <Link to="myprofile"><li>My Profile</li></Link>
+        <NavLink to="myprofile"><li>My Profile</li></NavLink>
       </ul>
     </div>
   </div>
