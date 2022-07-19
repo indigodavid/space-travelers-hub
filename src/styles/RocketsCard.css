@@ -9,7 +9,6 @@
   width: 90vw;
   margin: 1rem auto;
   border-radius: 0.5rem;
-  border: red solid 1px;
 }
 
 .rocketImg {
@@ -30,7 +29,7 @@
     font-size: 1.5rem;
   }
 
-  .rocketReserved {
+  .Reserved {
     background-color: var(--color-secondary);
     color: var(--color-grey-light);
     width: fit-content;
@@ -46,6 +45,17 @@
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    cursor: pointer;
+    bottom: 0;
+  }
+
+  .cancelReserveBtn {
+    background-color: var(--color-grey-light);
+    color: var(--color-grey-dark);
+    width: 10rem;
+    border: 1px solid var(--color-grey-dark);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
     cursor: pointer;
     bottom: 0;
   }

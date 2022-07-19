@@ -28,12 +28,12 @@ function RocketsCards({ rocket }) {
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
         <p className="paraDesc">
-          {rocketReserved === true && (<span className="rocketReserved">Reserved</span>)}
+          {rocketReserved === true && (<span className="Reserved">Reserved</span>)}
           {rocketDesc}
         </p>
         { rocketReserved === true
     ? (
-      <button className="cancelBtn" type="button" id={rocketId} onClick={cancelHandler}>
+      <button className="cancelReserveBtn" type="button" id={rocketId} onClick={cancelHandler}>
         Cancel Reservation
       </button>
     )
