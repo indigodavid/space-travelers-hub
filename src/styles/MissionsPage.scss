@@ -1,0 +1,75 @@
+/* stylelint-disable at-rule-no-unknown */
+$color-accent: #2d56b5;
+$color-negative: #fff;
+$color-border: #e8e8e8;
+$color-background: #fafafa;
+
+@mixin missions-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 1em;
+}
+
+@mixin flex-column-gap-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.missions {
+  @include flex-column-gap-1();
+
+  margin: 0 auto;
+  padding: 4%;
+  background-color: $color-background;
+
+  header {
+    @include missions-grid();
+
+    text-align: center;
+  }
+}
+
+.missionsData {
+  @include flex-column-gap-1();
+
+  margin: 0 auto;
+
+  li {
+    @include missions-grid();
+
+    border: $color-border solid 0.1em;
+    border-radius: 0.5em;
+    background-color: $color-negative;
+    padding: 1em;
+
+    .missionName {
+      font-weight: 700;
+    }
+
+    .status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      background-color: $color-accent;
+      cursor: pointer;
+      color: $color-negative;
+      font-size: 0.8rem;
+      padding: 1em;
+      border-radius: 0.5em;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      border: $color-accent solid 0.06em;
+      background-color: $color-negative;
+      color: $color-accent;
+    }
+  }
+}

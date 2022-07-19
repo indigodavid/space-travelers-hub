@@ -1,8 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import '../styles/MyProfile.scss';
 
-const MyProfile = (props) => {
-  const { missions, rockets } = props;
+const MyProfile = () => {
+  const missions = useSelector((state) => state.missions);
+  const rockets = useSelector((state) => state.rockets);
+  // filter missions and rockets accordingly
   return (
     <div className="profile">
       <div className="profile-column">
@@ -23,11 +26,6 @@ const MyProfile = (props) => {
       </div>
     </div>
   );
-};
-
-MyProfile.propTypes = {
-  missions: PropTypes.string.isRequired,
-  rockets: PropTypes.string.isRequired,
 };
 
 export default MyProfile;

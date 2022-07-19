@@ -13,3 +13,7 @@
   --color-grey-dark: #333;
   --color-grey-darker: #222;
 }
+
+ul {
+  list-style: none;
+}
