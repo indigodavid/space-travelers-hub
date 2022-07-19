@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-no-unknown */
 $color-accent: #2d56b5;
 $color-negative: #fff;
 
@@ -15,16 +16,20 @@ $color-negative: #fff;
 
 .missions {
   @include flex-column-gap-1();
+
   header {
     @include missions-grid();
+
     text-align: center;
   }
 }
 
 .missionsData {
   @include flex-column-gap-1();
+
   li {
     @include missions-grid();
+
     .missionName {
       font-weight: 700;
     }
