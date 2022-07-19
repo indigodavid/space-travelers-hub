@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Missions from './components/Missions';
 import Myprofile from './components/Myprofile';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockects/Rockets';
 
 function App() {
   return (
