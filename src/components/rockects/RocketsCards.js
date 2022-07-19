@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../../redux/rockets/RocketsSlice';
+import '../../styles/RocketsCard.css';
+//import '../../styles/RocketsCards.scss';
 
 function RocketsCards({ rocket }) {
   const dispatch = useDispatch();
@@ -21,7 +23,7 @@ function RocketsCards({ rocket }) {
   };
 
   return (
-    <section className="rocketCard">
+    <section className="rocketBox">
       <img className="rocketImg" src={rocketImg} alt="" srcSet="" />
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
