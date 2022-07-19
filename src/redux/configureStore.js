@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import rocketsReducer from './rockets/RocketsSlice';
-import missionsReducer from './missions/missions';
+import missionsReducer, { fetchMissions } from './missions/missions';
 
 const store = configureStore({
   reducer: {
@@ -10,5 +10,7 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
+
+store.dispatch(fetchMissions());
 
 export default store;
