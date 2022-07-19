@@ -12,7 +12,6 @@ export const fetchRocketsApi = createAsyncThunk(
   'rockets/fetchRocketsApi',
   async () => {
     const response = await axios.get(url);
-    console.log(response.data);
     return response.data;
   },
 );

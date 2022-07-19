@@ -16,7 +16,7 @@ function App() {
         <Route path="myprofile" element={<Myprofile />} />
       </Routes>
       <Footer />
-      </div>
+    </div>
   );
 }
 

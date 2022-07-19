@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../../redux/rockets/RocketsSlice';
 import '../../styles/RocketsCard.css';
-//import '../../styles/RocketsCards.scss';
+// import '../../styles/RocketsCards.scss';
 
 function RocketsCards({ rocket }) {
   const dispatch = useDispatch();
@@ -32,16 +32,16 @@ function RocketsCards({ rocket }) {
           {rocketDesc}
         </p>
         { rocketReserved === true
-    ? (
-      <button className="cancelReserveBtn" type="button" id={rocketId} onClick={cancelHandler}>
-        Cancel Reservation
-      </button>
-    )
-    : (
-      <button className="reserveBtn" type="button" id={rocketId} onClick={reserveHandler}>
-        Reserve Rocket
-      </button>
-    )}
+          ? (
+            <button className="cancelReserveBtn" type="button" id={rocketId} onClick={cancelHandler}>
+              Cancel Reservation
+            </button>
+          )
+          : (
+            <button className="reserveBtn" type="button" id={rocketId} onClick={reserveHandler}>
+              Reserve Rocket
+            </button>
+          )}
       </div>
     </section>
   );
