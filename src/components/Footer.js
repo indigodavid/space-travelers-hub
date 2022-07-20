@@ -1,9 +1,16 @@
 import React from 'react';
+import github from '../images/github.png';
+import '../styles/Footer.scss';
 
-const Footer = () => (
-  <footer>
-    <a href="https://www.flaticon.com/free-icons/planet" title="planet icons">Planet icons created by Freepik - Flaticon</a>
-  </footer>
-);
+function Footer() {
+  return (
+    <section className="footer">
+      Copyright ©️ 2022
+      <a href="https://github.com/indigodavid">David Vera Castillo</a>
+      <a href="https://github.com/masangana">Alex Masangana</a>
+      <img className="footerImg" src={github} alt="github-logo" />
+    </section>
+  );
+}
 
 export default Footer;

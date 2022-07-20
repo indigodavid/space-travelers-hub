@@ -1,11 +1,5 @@
 /* stylelint-disable at-rule-no-unknown */
-$color-accent: #2d56b5;
-$color-negative: #fff;
-$color-border: #e8e8e8;
-$color-background: #fafafa;
-$color-disabled: #7d7d7d;
-$color-active: #3096bf;
-$color-warning: #9a2727;
+@import 'App.scss';
 
 @mixin missions-grid {
   display: grid;
@@ -33,6 +27,12 @@ $color-warning: #9a2727;
   }
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
 .missionsData {
   @include flex-column-gap-1();
 
@@ -47,7 +47,20 @@ $color-warning: #9a2727;
     padding: 1em;
 
     .missionName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .description{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      height: 150px;
+      overflow: auto;
     }
 
     .status {
