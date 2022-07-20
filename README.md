@@ -1,42 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Space Travelers Hub
 
-> Description the project.
+> This project contains a React and Redux App that gets information from the SpaceX API to get SpaceX Missions and Rockets information. The state is managed using Redux to join or leave missions and to handle the rockets reservations and cancelations.
 
 
 ## Built With
 
 - React
-- Frameworks
-- Technologies used
+- Redux Toolkit
+- JEST
+- SCSS
+- React testing Library
 
-## Live Demo (if available)
+## Live Link
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://am-dv-spacetravelershub.netlify.app)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- NPM
+- Git
+- Modern Web Browser
+
 ### Setup
 
+    git clone https://github.com/indigodavid/space-travelers-hub.git
+    cd space-travelers-hub/
 ### Install
 
+    npm install
 ### Usage
 
+    npm start
+    npm run build
 ### Run tests
 
+    npm test
 ### Deployment
 
-
+- [Netlify](https://am-dv-spacetravelershub.netlify.app)
 
 ## Authors
 
@@ -48,9 +56,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **David Vera**
 
-- GitHub: [@indigodavid](https://github.com/indigodavid)
-- Twitter: [@indigo1987](https://twitter.com/indigo1987)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/david-vera-castillo-001b5756/)
+- GitHub: [![GitHub Badge](https://img.shields.io/badge/-indigodavid-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/indigodavid)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-indigo1987-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/indigo1987)
+- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-davidveracastillo-white?logo=LinkedIn&logoColor=1DA1F2&style=plastic)](https://linkedin.com/in/david-vera-castillo-001b5756/)
 
 ## 🤝 Contributing
 
@@ -64,9 +72,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Our supportives families 😊
+- Microverse
+- Image [Planet icons](https://www.flaticon.com/free-icons/planet) created by Freepik
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
