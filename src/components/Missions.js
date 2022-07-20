@@ -12,8 +12,8 @@ const Missions = () => {
           <div className="missionName">{mission.mission_name}</div>
           <div className="description">{mission.description}</div>
           <div className="status">
-            <MissionBadge reserved={mission.reserved} />
-            <JoinMission reserved={mission.reserved} id={mission.mission_id} />
+            <MissionBadge reserved={!!mission.reserved} />
+            <JoinMission reserved={!!mission.reserved} id={mission.mission_id} />
           </div>
         </li>
       ))}
