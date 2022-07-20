@@ -1,18 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { cancelRocket } from '../redux/rockets/RocketsSlice';
+import { useSelector } from 'react-redux';
 import '../styles/MyProfile.scss';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missions)
     .filter((mission) => mission.reserved);
   const rockets = useSelector((state) => state.rockets.filter((el) => el.rocketReserved === true));
-  const dispatch = useDispatch();
-
-  const cancelHandler = (e) => {
-    const data = e.target.id;
-    dispatch(cancelRocket(data));
-  };
 
   if (!rockets.length) {
     return (
@@ -41,19 +34,19 @@ const MyProfile = () => {
         <ul id="missions-list">
           {missions.map((mission) => (
             <li key={mission.mission_id}>{mission.mission_name}</li>
-            
+
           ))}
         </ul>
       </div>
       <div className="profile-column">
         <h2>My Rockets</h2>
         {rockets && rockets.map((rocket) => (
-            <div className="listBox" key={rocket.rocketId}>
-              <h3 className="listName">
-                {rocket.rocketName}
-              </h3>
-            </div>
-          ))}
+          <div className="listBox" key={rocket.rocketId}>
+            <h3 className="listName">
+              {rocket.rocketName}
+            </h3>
+          </div>
+        ))}
       </div>
     </div>
   );
