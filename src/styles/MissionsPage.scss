@@ -3,6 +3,9 @@ $color-accent: #2d56b5;
 $color-negative: #fff;
 $color-border: #e8e8e8;
 $color-background: #fafafa;
+$color-disabled: #7d7d7d;
+$color-active: #3096bf;
+$color-warning: #9a2727;
 
 @mixin missions-grid {
   display: grid;
@@ -19,7 +22,7 @@ $color-background: #fafafa;
 .missions {
   @include flex-column-gap-1();
 
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 4%;
   background-color: $color-background;
 
@@ -63,13 +66,42 @@ $color-background: #fafafa;
       font-size: 0.8rem;
       padding: 1em;
       border-radius: 0.5em;
+      font-weight: bold;
       text-transform: uppercase;
-    }
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
 
-    button:hover {
-      border: $color-accent solid 0.06em;
-      background-color: $color-negative;
-      color: $color-accent;
+      &:hover {
+        border: $color-accent solid 0.06em;
+        background-color: $color-negative;
+        color: $color-accent;
+      }
+
+      &.leave {
+        background-color: $color-warning;
+      }
+
+      &.leave:hover {
+        border-color: $color-warning;
+        background-color: $color-negative;
+        color: $color-warning;
+      }
     }
+  }
+}
+
+.membership {
+  background-color: $color-disabled;
+  color: $color-negative;
+  font-size: 0.8rem;
+  padding: 0.5em;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+
+  &.active {
+    background-color: $color-active;
+    font-weight: bold;
   }
 }
