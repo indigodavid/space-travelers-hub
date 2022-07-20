@@ -5,18 +5,18 @@ exports[`Test MissionsPage page Match Snapshot 1`] = `
   class="tableContainer"
 >
   <div
-    class="missions"
+    class="missionsProfile"
   >
     <h1>
       My Missions
     </h1>
-    <ul
+    <div
       class="itemsList"
     >
       <li>
         There are no missions joined.
       </li>
-    </ul>
+    </div>
   </div>
   <div
     class="rockets"
@@ -24,13 +24,13 @@ exports[`Test MissionsPage page Match Snapshot 1`] = `
     <h1>
       My Rockets
     </h1>
-    <ul
+    <div
       class="itemsList"
     >
       <li>
         There are no rockets reserved.
       </li>
-    </ul>
+    </div>
   </div>
 </section>
 `;

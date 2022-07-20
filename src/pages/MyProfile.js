@@ -12,7 +12,7 @@ const MyProfile = () => {
   return (
     <section className="tableContainer">
       <div className="missionsProfile">
-        <h1>My Missions22</h1>
+        <h1>My Missions</h1>
         <div className="itemsList">
           {!missions.length ? (<li>There are no missions joined.</li>) : null }
           {missions && missions.map((mission) => (
@@ -25,7 +25,7 @@ const MyProfile = () => {
         </div>
       </div>
       <div className="rockets">
-        <h1>My Rockets22</h1>
+        <h1>My Rockets</h1>
         <div className="itemsList">
           {!rockets.length ? (<li>There are no rockets reserved.</li>) : null }
           {rockets && rockets.map((rocket) => (
