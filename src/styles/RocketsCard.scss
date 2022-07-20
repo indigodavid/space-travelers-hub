@@ -11,6 +11,7 @@
   padding: 0.5rem;
   width: 90vw;
   border-radius: 0.5rem;
+
   .rocketImg {
     height: 200px;
     width: 250px;
@@ -18,14 +19,17 @@
     margin: 1rem;
     border-radius: 0.5rem;
   }
+
   .rocketDesc {
     font-size: 1rem;
     height: 12rem;
     position: relative;
   }
+
   .titleDesc {
     margin: 1rem 0 1rem 0;
   }
+
   .Reserved {
     background-color: $color-secondary;
     color: $color-grey-light;
@@ -34,7 +38,7 @@
     padding: 0.5rem;
     font-size: 0.75rem;
   }
-  
+
   .reserveBtn {
     background-color: $color-primary;
     color: $color-grey-light;
@@ -46,6 +50,7 @@
     bottom: 0;
     margin: 1rem 0 1rem 0;
   }
+
   .cancelReserveBtn {
     background-color: $color-grey-light;
     color: $color-grey-dark;
@@ -56,6 +61,5 @@
     cursor: pointer;
     bottom: 0;
     margin: 1rem 0 1rem 0;
-  }  
-  
+  }
 }
