@@ -1,54 +1,43 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../styles/MyProfile.scss';
+import '../styles/Profile.scss';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missions)
     .filter((mission) => mission.reserved);
   const rockets = useSelector((state) => state.rockets.filter((el) => el.rocketReserved === true));
 
-  if (!rockets.length) {
-    return (
-      <section className="tableContainer">
-        <div className="missions">
-          <h1>My Missions</h1>
-          <ul className="itemsList">
-            <li>There are no missions joined.</li>
-          </ul>
-        </div>
-        <div className="rockets">
-          <h1>My Rockets</h1>
-          <ul className="itemsList">
-            <li>There are no rockets reserved.</li>
-          </ul>
-        </div>
-      </section>
-    );
-  }
-
   // filter missions and rockets accordingly
-  return (
-    <div className="profile">
-      <div className="profile-column">
-        <h2>My Missions</h2>
-        <ul id="missions-list">
-          {missions.map((mission) => (
-            <li key={mission.mission_id}>{mission.mission_name}</li>
 
+  return (
+    <section className="tableContainer">
+      <div className="missionsProfile">
+        <h1>My Missions22</h1>
+        <div className="itemsList">
+          {!missions.length ? (<li>There are no missions joined.</li>) : null }
+          {missions && missions.map((mission) => (
+            <div className="listBox" key={mission.mission_id}>
+              <h2 className="listName">
+                {mission.mission_name}
+              </h2>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-      <div className="profile-column">
-        <h2>My Rockets</h2>
-        {rockets && rockets.map((rocket) => (
-          <div className="listBox" key={rocket.rocketId}>
-            <h3 className="listName">
-              {rocket.rocketName}
-            </h3>
-          </div>
-        ))}
+      <div className="rockets">
+        <h1>My Rockets22</h1>
+        <div className="itemsList">
+          {!rockets.length ? (<li>There are no rockets reserved.</li>) : null }
+          {rockets && rockets.map((rocket) => (
+            <div className="listBox" key={rocket.rocketId}>
+              <h2 className="listName">
+                {rocket.rocketName}
+              </h2>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

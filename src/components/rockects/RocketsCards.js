@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../../redux/rockets/RocketsSlice';
-import '../../styles/RocketsCard.css';
-// import '../../styles/RocketsCards.scss';
+import '../../styles/RocketsCard.scss';
 
 function RocketsCards({ rocket }) {
   const dispatch = useDispatch();
@@ -27,8 +26,9 @@ function RocketsCards({ rocket }) {
       <img className="rocketImg" src={rocketImg} alt="" srcSet="" />
       <div className="rocketDesc">
         <h1 className="titleDesc">{rocketName}</h1>
+        {rocketReserved === true && (<span className="Reserved">Reserved</span>)}
         <p className="paraDesc">
-          {rocketReserved === true && (<span className="Reserved">Reserved</span>)}
+
           {rocketDesc}
         </p>
         { rocketReserved === true

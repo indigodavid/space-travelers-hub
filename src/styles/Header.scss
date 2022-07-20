@@ -1,4 +1,4 @@
-@import '../App.css';
+@import './App.scss';
 
 .header {
   height: 100px;
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  color: var(--color-primary);
+  color: $color-primary;
   box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px;
 }
 
@@ -40,11 +40,15 @@ li {
   cursor: pointer;
 }
 
-li:nth-child(2) {
-  border-right: 1.5px solid black;
-}
-
 .title-logo {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+span {
+  padding: 0 10px;
+  display: block;
+  cursor: pointer;
+  color: $color-active;
+  font-size: 1rem;
 }
