@@ -28,7 +28,7 @@ function RocketsCards({ rocket }) {
         <h1 className="titleDesc">{rocketName}</h1>
         {rocketReserved === true && (<span className="Reserved">Reserved</span>)}
         <p className="paraDesc">
-          
+
           {rocketDesc}
         </p>
         { rocketReserved === true
