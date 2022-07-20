@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MissionsPage page Match Snapshot 1`] = `
+<div
+  class="missions"
+>
+  <header>
+    <h2>
+      Missions
+    </h2>
+    <h2>
+      Descriptions
+    </h2>
+    <h2>
+      Status
+    </h2>
+  </header>
+  <ul
+    class="missionsData"
+  />
+</div>
+`;

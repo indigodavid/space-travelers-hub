@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Missions component Match Snapshot 1`] = `
+<ul
+  class="missionsData"
+/>
+`;
