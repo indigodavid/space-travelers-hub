@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MissionsPage page Match Snapshot 1`] = `
+<section
+  class="tableContainer"
+>
+  <div
+    class="missions"
+  >
+    <h1>
+      My Missions
+    </h1>
+    <ul
+      class="itemsList"
+    >
+      <li>
+        There are no missions joined.
+      </li>
+    </ul>
+  </div>
+  <div
+    class="rockets"
+  >
+    <h1>
+      My Rockets
+    </h1>
+    <ul
+      class="itemsList"
+    >
+      <li>
+        There are no rockets reserved.
+      </li>
+    </ul>
+  </div>
+</section>
+`;
