@@ -1,0 +1,50 @@
+/* stylelint-disable at-rule-no-unknown */
+
+@import 'App.scss';
+
+.tableContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "missions rockets";
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+  background-color: $color-grey-light;
+}
+
+.missionsProfile {
+  grid-area: missions;
+}
+
+.rockets {
+  grid-area: rockets;
+}
+
+h1 {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.listBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 0.25rem;
+  width: 90%;
+}
+
+.listName {
+  font-size: 1rem;
+}

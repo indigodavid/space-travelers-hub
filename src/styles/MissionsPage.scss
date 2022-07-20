@@ -1,0 +1,120 @@
+/* stylelint-disable at-rule-no-unknown */
+@import 'App.scss';
+
+@mixin missions-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 1em;
+}
+
+@mixin flex-column-gap-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.missions {
+  @include flex-column-gap-1();
+
+  margin: 1em auto;
+  padding: 4%;
+  background-color: $color-background;
+
+  header {
+    @include missions-grid();
+
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.missionsData {
+  @include flex-column-gap-1();
+
+  margin: 0 auto;
+
+  li {
+    @include missions-grid();
+
+    border: $color-border solid 0.1em;
+    border-radius: 0.5em;
+    background-color: $color-negative;
+    padding: 1em;
+
+    .missionName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      height: 150px;
+      overflow: auto;
+    }
+
+    .status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      background-color: $color-accent;
+      cursor: pointer;
+      color: $color-negative;
+      font-size: 0.8rem;
+      padding: 1em;
+      border-radius: 0.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+
+      &:hover {
+        border: $color-accent solid 0.06em;
+        background-color: $color-negative;
+        color: $color-accent;
+      }
+
+      &.leave {
+        background-color: $color-warning;
+      }
+
+      &.leave:hover {
+        border-color: $color-warning;
+        background-color: $color-negative;
+        color: $color-warning;
+      }
+    }
+  }
+}
+
+.membership {
+  background-color: $color-disabled;
+  color: $color-negative;
+  font-size: 0.8rem;
+  padding: 0.5em;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+
+  &.active {
+    background-color: $color-active;
+    font-weight: bold;
+  }
+}

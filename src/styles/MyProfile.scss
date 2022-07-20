@@ -1,0 +1,27 @@
+/* stylelint-disable at-rule-no-unknown */
+@mixin profile-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+#missions-list {
+  @include profile-lists();
+}
+
+#rockets-list {
+  @include profile-lists();
+}
+
+.profile {
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
