@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import MyProfile from './pages/MyProfile';
-import Rockets from './components/rockects/Rockets';
+import Rockets from './pages/Rockets';
 import Footer from './components/Footer';
 import MissionsPage from './pages/MissionsPage';
 
